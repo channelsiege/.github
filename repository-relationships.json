@@ -1,10 +1,56 @@
 {
+  "$schema": "./repository-relationships.schema.json",
+  "audience": "public",
+  "generated": {
+    "complete_for_visibility": "public",
+    "generated_at": "2026-08-05T20:52:31Z",
+    "generator_version": "2026-08-04.1",
+    "inventory_digest": "sha256:08cb7e36de12ba657127fae82f9ea658b1e990575663333e56296d2d2c31052f",
+    "managed_by": "ore-repository-relationship-rollout",
+    "omitted_repository_count": 0,
+    "private_repositories_omitted": false,
+    "source": "GitHub GraphQL repository inventory plus reviewed manual declarations"
+  },
+  "owner": {
+    "account_type": "organization",
+    "dotgithub_repository": "channelsiege/.github",
+    "github_id": "311154433",
+    "linear_project": {
+      "id": "05af31ea-abce-4425-bf95-9fd24957d5fb",
+      "name": "github.com/channelsiege",
+      "team_id": "eb8ab169-5afe-4b6f-9cab-3f2aa3e887dc",
+      "url": "https://linear.app/denman/project/githubcomchannelsiege-6eecb913b93e",
+      "workspace": "denman"
+    },
+    "login": "channelsiege",
+    "mapping_id": "context:channelsiege"
+  },
+  "private_registry": {
+    "contains_non_public_inventory": false,
+    "digest": "sha256:a4e393c79ae001fd0f7617b8ab140dceeedf41bb3e2daac41c28a766169b8fbb",
+    "path": "owners/channelsiege.json",
+    "repository": "ORESoftware/project-registry"
+  },
+  "relationships": [],
+  "repositories": [
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "channelsiege/.github",
+      "github_id": "1324046264",
+      "name": ".github",
+      "owner": "channelsiege",
+      "roles": [
+        "community-health",
+        "governance",
+        "relationship-registry"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/channelsiege/.github",
+      "visibility": "public"
+    }
+  ],
   "schema_version": 1,
-  "organization": "channelsiege",
-  "generated_at": null,
-  "repositories": [],
-  "notes": [
-    "Populate from live GitHub inventory; do not infer unverified dependencies.",
-    "Repository-local manifests remain authoritative for exact dependency versions."
-  ]
+  "unresolved_hints": []
 }
