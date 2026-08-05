@@ -29,7 +29,7 @@
     "contains_non_public_inventory": false,
     "digest": "sha256:a4e393c79ae001fd0f7617b8ab140dceeedf41bb3e2daac41c28a766169b8fbb",
     "path": "owners/channelsiege.json",
-    "repository": "ORESoftware/project-registry"
+    "repository": "approved-private-registry"
   },
   "relationships": [],
   "repositories": [
