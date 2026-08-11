@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "product": "channelsiege",
+  "status": "unresolved",
+  "repository_creation_allowed": false,
+  "implementation_promotion_allowed": false,
+  "linear_issue": "DEN-1864",
+  "canonical_linear_project": "github.com/channelsiege",
+  "current_public_repositories": [
+    "channelsiege/.github"
+  ],
+  "required_for_approval": [
+    "intended_users",
+    "primary_workflows",
+    "measurable_outcomes",
+    "non_goals",
+    "channel_definition",
+    "siege_definition",
+    "data_classes",
+    "trust_boundaries",
+    "identity_and_authorization",
+    "retention_and_privacy",
+    "abuse_and_prohibited_uses",
+    "legal_and_compliance_questions",
+    "initial_deployment_shape",
+    "runtime_and_language_choices",
+    "interface_strategy",
+    "persistence_needs",
+    "observability_baseline",
+    "first_vertical_slice",
+    "second_vertical_slice",
+    "acceptance_evidence"
+  ],
+  "approved_charter": null
+}

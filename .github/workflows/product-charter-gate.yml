@@ -1,0 +1,41 @@
+name: product-charter-gate
+
+on:
+  pull_request:
+    paths:
+      - 'product/**'
+      - 'scripts/check_product_charter.py'
+      - '.github/workflows/product-charter-gate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'product/**'
+      - 'scripts/check_product_charter.py'
+      - '.github/workflows/product-charter-gate.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: product-charter-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  charter-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Compile validator
+        run: python3 -m py_compile scripts/check_product_charter.py
+      - name: Enforce fail-closed product definition
+        run: python3 scripts/check_product_charter.py
+      - name: Reject conflict markers in charter sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE '^(<<<<<<<|=======|>>>>>>>)' product scripts/check_product_charter.py; then
+            echo '::error::unresolved merge marker found in product-charter sources'
+            exit 1
+          fi
